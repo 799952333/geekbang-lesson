@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+<tlib-version>2.2</tlib-version>
+    <short-name>mytag</short-name>
+    <uri>/mytag</uri>
+    <tag>
+        <name>helloWorld</name>
+        <tag-class>com.bamboo.TestTagScriptless</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>testInfo</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    <tag>
+        <name>setHeader</name>
+        <tag-class>com.bamboo.TestTagEmpty</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>cacheControl</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>connection</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>host</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>acceptEncoding</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+    <tag>
+        <name>printTestInfo</name>
+        <tag-class>com.bamboo.TestTagTagdependent</tag-class>
+        <body-content>tagdependent</body-content>
+
+    </tag>
+</taglib>
